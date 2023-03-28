@@ -4,19 +4,14 @@
 
 body {
     background-color: #e9e8e8;
-    margin: 30px 150px 30px 150px;
+   
 }
 
-header, main {
+.all {
     background-color: #fff;
-    padding: 20px;
-}
-
-.container{
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
+    width: 900px;
+    max-width: 80%;
+    margin: 20px auto;
     border-radius: 10px;
 }
 
@@ -25,7 +20,10 @@ header, main {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
- 
+}
+
+#hideContent{
+    display: block;
 }
 
 .header h1 {
@@ -35,44 +33,75 @@ header, main {
 }
 
 .content p {
-    font-size: 17px;
+    font-size: 15px;
     color: #333;
     display: flex;
     align-items: center;
+    padding: 5px 30px 5px 30px;
 }
 
-.startBtn {
+.startButton {
     display: flex;
     justify-content: center;
 }
 
 .startQuiz {
-    background-color: #61246399;
+    background-color: rgb(98, 46, 77);
     color: #fff;
-    font-size: 18px;
+    font-size: 25px;
     font-weight: bold;
     padding: 10px 20px;
-    margin-top: 35px;
+    margin: 45px 0 20px 0;
     border-radius: 5px;
     border: none;
 } 
+.startQuiz:hover {
+    background-color: rgb(139, 67, 110);
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    display: none;
+}
+
+#questionParag{
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
 
 .choiceButtons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 7px;
+    height: 80px;
+    width: 85%;
+    margin: auto;
 }
 
 .btn {
-    width: 30%;
-    height: 40px;
-    padding: 5px;
-    margin: 5px;
     border-radius: 5px;
     background-color: rgb(98, 46, 77);
     color: whitesmoke;
-    
 }
 
 .btn:hover {
     background-color:  rgb(123, 59, 97);
+}
+
+hr {
+    margin-top: 50px;
+    
+}
+.answer {
+    
 }

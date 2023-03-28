@@ -10,45 +10,72 @@
 </head>
 
 <body>
-    
-    <header>
-        <div class="header">
-            <h1>Coding Quiz Challenge</h1>
-        </div>
-        <div class="content">
-         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
-                    answers will penalize your score/time by ten seconds!</p>
+    <div class="all">
+        <header>
+            <div class="header">
+                <h1>Coding Quiz Challenge</h1>
             </div>
-            <div class="startbtn">
-                <button class="startQuiz hide">Start Quiz</button>
+            <div id="hideContent">
+                <div class="content">
+                    <p>Try to answer the following code-related questions within the time limit. Keep in mind that
+                        incorrect
+                        answers will penalize your score/time by ten seconds!</p>
+                </div>
+                <div class="startButton">
+                    <button class="startQuiz">Start Quiz</button>
+                </div>
             </div>
-    </header>
+        </header>
 
-    <main>
-    <div class="container">
-        <section>
-            <div><p id="questionParag"></p>
-            </di>
-            <div class="choiceButtons">
-                <button id="btn1" class="btn">choice1</button>
-                <button id="btn2" class="btn">choice2</button>
-                <button id="btn3" class="btn">choice3</button>
-                <button id="btn4" class="btn">choice4</button>
+        <main>
+            <div class="container">
+                <section>
+                    <div>
+                        <p id="questionParag"></p>
+                        </di>
+                        <div class="choiceButtons">
+                            <button id="btn1" class="btn">choice1</button>
+                            <button id="btn2" class="btn">choice2</button>
+                            <button id="btn3" class="btn">choice3</button>
+                            <button id="btn4" class="btn">choice4</button>
+                        </div>
+                        <hr>
+                        <div>
+                            <p id="answer"></p>
+                        </div>
+                </section>
             </div>
-            <div><p id="answer"></p>
+
+            <div class="InitialScore">
+                <div class="storeInfo">
+                    <p id="done">All done!</p>
+                    <p id="score">Your final score is: </p>
+                    
+                    <label for="initials">Enter Initials</label>
+                    <input type="text" id="initials" placeholder="Enter Initials">
+                    <button id="submitInitials">Submit</button>
+                </div>
+                <div class="savedInfo">
+                    <p id="highScores">High Scores</p>
+                    <p id="savedInitScore"></p>
+                    <P id="errorMsg"></P>
+                    <button id="clear">Clear High Scores</button>
+                    <button id="goBack">Go Back</button>
+                </div>
+
+
             </div>
-        </section>
-        </div>
-    </main>
+        </main>
 
-    <!-- <button class="reset-button">Reset Score</button> -->
+        <!-- <button class="reset-button">Reset Score</button> -->
 
-            <!-- <div class="card timer">
+        <!-- <div class="card timer">
                 <div class="timer-text">
                     <div class="large-font timer-count">10</div>
                     <h3>seconds remaining</h3>
                 </div>
             </div> -->
+    </div>
 
     <script src="./assets/scrip.js"></script>
 </body>
