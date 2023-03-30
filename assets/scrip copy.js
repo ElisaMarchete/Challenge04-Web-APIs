@@ -1,11 +1,6 @@
 // Control the next question
 let countQuestion = 0;
 let getQuestion;
-let time = 60;
-let timeInterval;
-let timerEl;
-let nameScore;
-let score;
 
 // Assignment Code
 let startQuizBtn = document.querySelector(".startQuiz");
@@ -22,46 +17,24 @@ let submitInitials = document.getElementById("submitInitials");
 let savedInitScore = document.getElementById("savedInitScore");
 let errorMsg = document.getElementById("errorMsg");
 let timerElement = document.getElementById("timerCount");
-let doneMsg = document.querySelector(".storeInfo");
-let timeParag = document.getElementById("timeParag");
-let scoreStorage = document.getElementById("score");
-let highScores = document.querySelector(".savedInfo");
-let clearBtn = document.getElementById("clear");
-let btnGoBack = document.getElementById("btnGoBack");
 
 // Add event listener to generate button
-startQuizBtn.addEventListener("click", startGame);
-
+// startQuizBtn.addEventListener("click", startGame);
+// Display hidden content
+startQuizBtn.addEventListener("click", displayContent);
+// Hide header
+startQuizBtn.addEventListener("click", hideHeader);
 // add event listener to move to the nextquestion
 choiceBtn1.addEventListener("click", nextQuestion);
 choiceBtn2.addEventListener("click", nextQuestion);
 choiceBtn3.addEventListener("click", nextQuestion);
 choiceBtn4.addEventListener("click", nextQuestion);
-// Get player name
-submitInitials.addEventListener("click", initialsInput);
-
-btnGoBack.addEventListener("click", startGame);
-
-// The init function is called when the page loads FIXE IT
-function init() {
-  let nameScore;
-}
 
 function startGame() {
-  countQuestion = 0;
-  time = 60;
-  timeInterval = setInterval(timer, 1000);
   createQuestion();
   displayContent();
   hideHeader();
-}
-
-function timer() {
-  time = time - 1;
-  timerEl = timerElement.textContent = time;
-  if (time <= 0) {
-    clearInterval(timeInterval);
-  }
+  startTimer();
 }
 
 function nextQuestion(event) {
@@ -73,23 +46,10 @@ function nextQuestion(event) {
     answerEl.innerHTML = "Correct Answer!";
   } else {
     answerEl.innerHTML = "Incorrect Answer!";
-    time = time - 10;
   }
 
   // move tp the next question
   countQuestion++;
-
-  if (countQuestion >= 7) {
-    clearInterval(timeInterval);
-    doneMsg.style.display = "block";
-    timerElement.style.display = "none";
-    timeParag.style.display = "none";
-    answerEl.style.display = "none";
-
-    // localStorage.setItem("storeTimer", timerEl);
-    // let getTimer = localStorage.getItem("storeTimer");
-    // score = scoreStorage.textContent = getTimer;
-  }
 
   // Call function to create a qustion when one option is selected
   createQuestion();
@@ -108,7 +68,7 @@ function createQuestion() {
 
 // Display hide questions
 function displayContent() {
-  if (containerEl.style.display == "none") {
+  if (containerEl.style.display === "none") {
     containerEl.style.display = "block";
   } else {
     containerEl.style.display = "none";
@@ -124,43 +84,42 @@ function hideHeader() {
   }
 }
 
-function initialsInput(event) {
+submitInitials.addEventListener("click", function (event) {
   event.preventDefault();
+
   let userInitials = initials.value;
-console.log("initial")
+  localStorage.setItem("storeInitials", userInitials);
+
+  let getInit = localStorage.getItem("storeInitials");
+  savedInitScore.textContent = getInit;
+
   if (userInitials === "") {
     errorMsg.innerHTML = "ERROR! Cannot be blank";
   } else {
     errorMsg.innerHTML = "Registered successfully";
   }
+});
 
-  let storeResult = JSON.parse(localStorage.getItem("store"));
-  let finalScore = `${userInitials} - ${time}`;
-  if (!storeResult) {
-    storeResult = [finalScore];
-  } else {
-    storeResult.push(finalScore);
-  }
-
-  let saveResult = JSON.stringify(storeResult)
-  localStorage.setItem("store", saveResult);
-
-  // let getInit = localStorage.getItem("storeInitials");
-  for (let i = 0; i < storeResult.length; i++) {
-    savedInitScore.textContent += storeResult[i];
-
-    
-  }
-
+function startTimer() {
+  let timer = 60;
+  let seconds;
+  setInterval(function () {
+    seconds = parseInt(timer % 60, 10);
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+    timerElement.textContent = "00:" + seconds;
+    if (--timer < 0) {
+      timer = 60;
+    }
+  }, 1000);
 
   
-
-  highScores.style.display = "block";
-  doneMsg.style.display = "none";
 }
 
-// Calls init() so that it fires when page opened
-init();
+
+// DEDUCT INCORRECT ANSWER 10 SECONDS
+// GET THE REMAINING TIME LEFT AS SCORE
+
+// MERGE THE SCORE + INITIAL
 
 // Array of questions, choices, and answers
 let questions = [

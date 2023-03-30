@@ -15,7 +15,7 @@
             <div class="header">
                 <h1>Coding Quiz Challenge</h1>
             </div>
-            <div id="hideContent">
+            <div id="hideContent" style="display: block;">
                 <div class="content">
                     <p>Try to answer the following code-related questions within the time limit. Keep in mind that
                         incorrect
@@ -28,7 +28,7 @@
         </header>
 
         <main>
-            <div class="container">
+            <div class="container" style="display: none;">
                 <section>
                     <div>
                         <p id="questionParag"></p>
@@ -41,40 +41,39 @@
                         </div>
                         <hr>
                         <div>
-                            <p id="answer"></p>
+                            <p id="answer" style="display: block;"></p>
                         </div>
+                    </div>
                 </section>
             </div>
 
             <div class="InitialScore">
-                <div class="storeInfo">
-                    <p id="done">All done!</p>
-                    <p id="score">Your final score is: </p>
-                    
+                <div class="storeInfo" style="display: none;">
+                    <p id="doneMsg">All done! </p>
+                    <p id="scoreMsg">Your final score is: </p>
+                    <p id="score"></p>
+
                     <label for="initials">Enter Initials</label>
                     <input type="text" id="initials" placeholder="Enter Initials">
                     <button id="submitInitials">Submit</button>
                 </div>
-                <div class="savedInfo">
+                <div class="savedInfo" style="display: none;">
                     <p id="highScores">High Scores</p>
                     <p id="savedInitScore"></p>
                     <P id="errorMsg"></P>
                     <button id="clear">Clear High Scores</button>
-                    <button id="goBack">Go Back</button>
+                    <button id="btnGoBack">Go Back</button>
                 </div>
+            </div>
 
-
+            <div class="timer" style="display: block;">
+                <div class="timer-text">
+                    <div id="timerCount" class="timer-count">
+                    </div>
+                    <p id="timeParag" style="display: block;">Time: <p>
+                    </div>
             </div>
         </main>
-
-        <!-- <button class="reset-button">Reset Score</button> -->
-
-        <!-- <div class="card timer">
-                <div class="timer-text">
-                    <div class="large-font timer-count">10</div>
-                    <h3>seconds remaining</h3>
-                </div>
-            </div> -->
     </div>
 
     <script src="./assets/scrip.js"></script>

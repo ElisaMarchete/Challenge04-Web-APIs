@@ -22,9 +22,6 @@ body {
     justify-content: center;
 }
 
-#hideContent{
-    display: block;
-}
 
 .header h1 {
     font-size: 35px;
@@ -66,7 +63,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     justify-content: center;
-    display: none;
+    /* display: none; */
 }
 
 #questionParag{
