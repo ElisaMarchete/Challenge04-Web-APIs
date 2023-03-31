@@ -27,4 +27,4 @@ Good luck and have fun!
 ![Screenshot of deployed application](./assets/screenshot/Screenshot2.png)
 ![Screenshot of deployed application](./assets/screenshot/Screenshot3.png)
 ![Screenshot of deployed application](./assets/screenshot/Screenshot4.png)
-[Link deployed application]((https://elisamarchete.github.io/code-quiz/))
+[Link deployed application](https://elisamarchete.github.io/code-quiz/)
