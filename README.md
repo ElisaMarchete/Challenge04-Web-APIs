@@ -24,4 +24,4 @@ Good luck and have fun!
 
 ## Screenshot and link for the deployed application
 ![Screenshot of deployed application](./assets/screenshot/Screenshot1.png)(./assets/screenshot/Screenshot2.png)
-[Link deployed application]()
+[Link deployed application]((https://elisamarchete.github.io/code-quiz/))
