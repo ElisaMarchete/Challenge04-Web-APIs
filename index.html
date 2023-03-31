@@ -46,22 +46,25 @@
                     </div>
                 </section>
             </div>
-
+        </main>
+        <footer>
             <div class="InitialScore">
                 <div class="storeInfo" style="display: none;">
                     <p id="doneMsg">All done! </p>
                     <p id="scoreMsg">Your final score is: </p>
                     <p id="score"></p>
 
-                    <label for="initials">Enter Initials</label>
+                    <label id="labelInitials" for="initials">Enter Initials</label>
                     <input type="text" id="initials" placeholder="Enter Initials">
                     <button id="submitInitials">Submit</button>
                 </div>
                 <div class="savedInfo" style="display: none;">
                     <p id="highScores">High Scores</p>
-                    <p id="savedInitScore"></p>
-                    <P id="errorMsg"></P>
-                    <button id="clear">Clear High Scores</button>
+
+                    <ul id="savedInitScore">
+
+                    </ul>
+                    <button id="btnClear">Clear High Scores</button>
                     <button id="btnGoBack">Go Back</button>
                 </div>
             </div>
@@ -70,11 +73,12 @@
                 <div class="timer-text">
                     <div id="timerCount" class="timer-count">
                     </div>
-                    <p id="timeParag" style="display: block;">Time: <p>
-                    </div>
+                    <p id="timeParag" style="display: block;">Time:
+                    <p>
+                </div>
             </div>
-        </main>
     </div>
+    </footer>
 
     <script src="./assets/scrip.js"></script>
 </body>

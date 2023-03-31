@@ -4,7 +4,7 @@
 
 body {
     background-color: #e9e8e8;
-   
+
 }
 
 .all {
@@ -15,7 +15,7 @@ body {
     border-radius: 10px;
 }
 
-.header{
+.header {
     text-align: center;
     margin-bottom: 20px;
     display: flex;
@@ -51,22 +51,22 @@ body {
     margin: 45px 0 20px 0;
     border-radius: 5px;
     border: none;
-} 
+}
+
 .startQuiz:hover {
     background-color: rgb(139, 67, 110);
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 1200px;
     margin: auto;
     padding: 20px;
     border-radius: 10px;
     justify-content: center;
-    /* display: none; */
 }
 
-#questionParag{
+#questionParag {
     font-size: 26px;
     font-weight: bold;
     color: #333;
@@ -92,13 +92,73 @@ body {
 }
 
 .btn:hover {
-    background-color:  rgb(123, 59, 97);
+    background-color: rgb(123, 59, 97);
 }
 
 hr {
     margin-top: 50px;
-    
 }
-.answer {
-    
+
+#answer {
+    font-weight: italic;
+    font-size: 15px;
+    margin: 5px 10px 5px 10px;
+}
+
+#doneMsg {
+    font-size: 23px;
+    font-weight: bold;
+    margin: 10px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#scoreMsg {
+    font-size: 15px;
+    margin: 20px 0 0 100px;
+}
+
+#score {
+    font-size: 15px;
+    margin: -17px 0 15px 220px;
+}
+
+#labelInitials {
+    font-size: 15px;
+    margin: 20px 0 0 100px;
+}
+
+#initials {
+    font-size: 15px;
+    margin: 5px 0 10px 0;
+}
+
+#timerCount {
+    font-size: 15px;
+    margin: 20px 0 0 100px;
+}
+
+#timeParag {
+    font-size: 15px;
+    margin: -18px 0 15px 60px;
+}
+
+.timer {
+    margin: 10px 200px 10px 0;
+}
+
+.savedInfo {
+    padding: 10px;
+    margin: 5px 0 20px 30px;
+}
+
+#highScores {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+ul {
+    /* list-style-type: none; */
+    padding: 10px;
+    margin: 10px 0 30px 0;
 }
