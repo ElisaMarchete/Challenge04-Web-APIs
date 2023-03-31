@@ -3,7 +3,7 @@
 Welcome to the README file for the Code Quiz!
 
 ## Description
-This code quiz is designed to test your knowledge of programming concepts and syntax in a specific programming language. In this quiz, you will be presented with a series of multiple-choice questions and coding challenges. You will have a limited amount of time to answer each question, and your score will be calculated based on the number of correct answers you provide.
+This code quiz is designed to test your knowledge of programming concepts and syntax in a specific programming language. In this quiz, you will be presented with a series of multiple-choice questions. You will have a limited amount of time to answer each question, and your score will be calculated based on the time remaining.
 
 ## Table of Contents 
 1. To start the quiz, open the index.html file in your web browser.
